@@ -660,7 +660,7 @@ html[data-apr="v1"] #apr2{display:none}
 .p-zoom img{object-position:50% 50%}
 /* Services: portrait photos on tablet/mobile so they are not cropped to a thin strip */
 @media (max-width:1100px){
-  .p-bg{height:auto!important;width:min(100%,460px);aspect-ratio:10/11}
+  .p-bg{--bh:clamp(250px,calc(100svh - 400px),400px);height:var(--bh)!important;width:min(100%,calc(var(--bh)*.8))!important;aspect-ratio:auto;margin-left:auto;margin-right:auto}
   .p-zoom img{object-position:50% 50%}
 }
 </style>
